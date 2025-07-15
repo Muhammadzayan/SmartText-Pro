@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartText Pro — Full On Cheezy Party Mode</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+</head>
+<body>
+  <div class="app-wrapper">
+
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="SmartText Pro Logo" />
+        <h1>SmartText Pro</h1>
+      </div>
+      <div class="controls">
+
+        <div class="sound-selector" title="Typing Sound">
+          <label for="soundSelect">🔊 Sound:</label>
+          <select id="soundSelect">
+            <option value="none">None</option>
+            <option value="click1" selected>Click 1</option>
+            <option value="click2">Click 2</option>
+            <option value="typewriter">Typewriter</option>
+          </select>
+          <div id="soundIcon" class="sound-icon" title="Toggle Sound On/Off">🔈</div>
+        </div>
+
+        <button id="scrollTopBtn" title="Scroll to top">⬆️</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="left-panel">
+        <textarea
+          id="textInput"
+          placeholder="Start typing here..."
+          spellcheck="false"
+          autocomplete="off"
+          autofocus
+        ></textarea>
+
+        <section class="buttons">
+          <button id="copyBtn" title="Copy to Clipboard">📋 Copy</button>
+          <button id="clearBtn" title="Clear Text">🧹 Clear</button>
+          <button id="saveBtn" title="Save as .txt">💾 Save</button>
+        </section>
+
+        <section class="typing-stats">
+          <div>Words: <span id="wordCount">0</span></div>
+          <div>Characters: <span id="charCount">0</span></div>
+          <div>Paragraphs: <span id="paraCount">0</span></div>
+          <div>Read Time: <span id="readTime">0</span> min</div>
+          <div>Typing Speed: <span id="typingSpeed">0</span> WPM</div>
+          <div>Typing Streak: <span id="typingStreak">0</span> sec</div>
+          <div>Combo Streak: <span id="comboStreak">0</span> 🔥</div>
+        </section>
+
+        <section class="progress-bar-wrapper" title="Typing progress (500 words goal)">
+          <div class="progress-bar" id="progressBar"></div>
+        </section>
+
+        <section class="emoji-bar" title="Click emoji to insert">
+          <button class="emoji-btn">😊</button>
+          <button class="emoji-btn">🔥</button>
+          <button class="emoji-btn">🚀</button>
+          <button class="emoji-btn">✨</button>
+          <button class="emoji-btn">👍</button>
+          <button class="emoji-btn">🎉</button>
+          <button class="emoji-btn">❤️</button>
+        </section>
+      </div>
+
+      <aside class="right-panel">
+        <h2>Popular Words</h2>
+        <div id="wordCloud" class="word-cloud"></div>
+      </aside>
+    </main>
+
+    <footer id="footerQuote">
+      <p>© 2025 Muhammad Zayan | SmartText Pro Ultimate Cheezy Party Mode</p>
+      <p id="quoteText">“Keep typing, keep shining!”</p>
+    </footer>
+
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
